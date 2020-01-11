@@ -25,6 +25,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_cupertino_localizations: ^1.0.1
+  snappable:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -45,6 +46,15 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+#
+#  fonts:
+#    - family: RobotoMono
+#      fonts:
+#        - asset: assets/fonts/RobotoMono-Bold.ttf
+#    - family: DancingScript
+#      fonts:
+#        - asset: assets/fonts/DancingScript-Bold.ttf
+#          weight: 300
 
   # To add assets to your application, add an assets section, like this:
   # assets:

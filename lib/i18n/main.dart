@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:samples_rabble/i18n/i18n/Strings.dart';
+import 'package:samples_rabble/i18n/i18n/str_model.dart';
 
 void main() async {
   return runApp(MyApp());
@@ -77,6 +78,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(
+              Strings.of(context).multiArgs(StrModel(1, 2)),
+            ),
+            const SizedBox(
+              height: 28,
+            ),
             Text(
               Strings.of(context).message,
             ),
