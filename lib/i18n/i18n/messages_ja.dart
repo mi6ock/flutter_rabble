@@ -21,6 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "heihei" : MessageLookupByLibrary.simpleMessage("破壊"),
     "message" : MessageLookupByLibrary.simpleMessage("ボタンを押した回数がここに表示されます"),
     "title" : MessageLookupByLibrary.simpleMessage("カウントサンプル")
   };

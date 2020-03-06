@@ -14,14 +14,14 @@ import 'package:intl/message_lookup_by_library.dart';
 
 final messages = new MessageLookup();
 
-typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
-
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'messages';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static _notInlinedMessages(_) => <String, Function> {
-    "message" : MessageLookupByLibrary.simpleMessage("You have pushed the button this many times:"),
-    "title" : MessageLookupByLibrary.simpleMessage("Flutter Demo Home Page")
-  };
+  static _notInlinedMessages(_) => <String, Function>{
+        "heihei": MessageLookupByLibrary.simpleMessage("destory"),
+        "message": MessageLookupByLibrary.simpleMessage(
+            "You have pushed the button this many times:"),
+        "title": MessageLookupByLibrary.simpleMessage("Flutter Demo Home Page")
+      };
 }
