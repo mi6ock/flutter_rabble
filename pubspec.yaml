@@ -21,6 +21,7 @@ dependencies:
     sdk: flutter
 
   # ローカライゼーション関連
+  intl:
   intl_translation:
   flutter_localizations:
     sdk: flutter
@@ -29,15 +30,30 @@ dependencies:
 #  speech_to_text:
   fit_kit:
   provider:
+  auto_size_text:
   pimp_my_button:
-
+  carousel_slider:
+  page_view_indicators:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  freezed_annotation:
+  flutter_state_notifier:
+  firebase_core: ^0.4.0
+  firebase_ml_vision:
+  camera:
+  path_provider:
+  qr_flutter: ^3.1.0
+  swipe_button:
+  charts_flutter:
+  flutter_visualizers:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  json_serializable:
+  build_runner:
+  freezed:
 
 
 # For information on the generic Dart part of this file, see the

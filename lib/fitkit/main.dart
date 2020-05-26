@@ -1,9 +1,12 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:fit_kit/fit_kit.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
+
+/// todo 裏側で設定しないとこれは動かない
 
 class MyApp extends StatefulWidget {
   @override
@@ -43,29 +46,58 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> read() async {
     results.clear();
-    var result = await FitKit.read(
-      DataType.STEP_COUNT,
-      dateFrom: _dateFrom,
-      dateTo: _dateTo,
-      limit: _limit,
-    );
-    print(result);
 
-//    try {
-//      permissions = await FitKit.requestPermissions(DataType.values);
-//      if (permissions) {
-//          var result = await FitKit.read(
-//            DataType.STEP_COUNT,
-//            dateFrom: _dateFrom,
-//            dateTo: _dateTo,
-//            limit: _limit,
-//          );
-//        print(result);
-////        result = 'readAll: success';
-//      }
-//    } catch (e) {
-//      result = 'readAll: $e';
-//    }
+//    List<DataType> types = [DataType.HEART_RATE,DataType.STEP_COUNT,];
+
+    List<DataType> types;
+
+    if (Platform.isAndroid) {
+      types = [
+        DataType.HEART_RATE,
+        DataType.STEP_COUNT,
+        DataType.HEIGHT,
+        DataType.WEIGHT,
+        DataType.DISTANCE,
+        DataType.ENERGY,
+        DataType.WATER,
+        DataType.SLEEP,
+      ];
+    } else {
+      types = [
+        DataType.HEART_RATE,
+        DataType.STEP_COUNT,
+        DataType.HEIGHT,
+        DataType.WEIGHT,
+        DataType.DISTANCE,
+        DataType.ENERGY,
+        DataType.WATER,
+        DataType.SLEEP,
+        DataType.STAND_TIME,
+        DataType.EXERCISE_TIME,
+      ];
+    }
+
+    try {
+      print(types);
+      permissions = await FitKit.requestPermissions(types);
+      print(permissions);
+      if (!permissions) {
+        result = 'requestPermissions: failed';
+      } else {
+        for (DataType type in types) {
+          results[type] = await FitKit.read(
+            type,
+            dateFrom: _dateFrom,
+            dateTo: _dateTo,
+            limit: _limit,
+          );
+        }
+
+        result = 'readAll: success';
+      }
+    } catch (e) {
+      result = 'readAll: $e';
+    }
 
     setState(() {});
   }

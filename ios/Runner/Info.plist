@@ -50,5 +50,9 @@
 	<string>using </string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 </dict>
 </plist>
