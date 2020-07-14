@@ -126,6 +126,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - objectbox (0.0.1)
   - path_provider (0.0.1):
     - Flutter
   - path_provider_macos (0.0.1):
@@ -141,6 +142,7 @@ DEPENDENCIES:
   - fit_kit (from `.symlinks/plugins/fit_kit/ios`)
   - Flutter (from `Flutter`)
   - flutter_visualizers (from `.symlinks/plugins/flutter_visualizers/ios`)
+  - objectbox (from `.symlinks/plugins/objectbox/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
   - path_provider_macos (from `.symlinks/plugins/path_provider_macos/ios`)
 
@@ -181,6 +183,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_visualizers:
     :path: ".symlinks/plugins/flutter_visualizers/ios"
+  objectbox:
+    :path: ".symlinks/plugins/objectbox/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
   path_provider_macos:
@@ -211,6 +215,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  objectbox: 5ccdf35c24ff481af7f568e5a34206ec66ce74dd
   path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
   path_provider_macos: f760a3c5b04357c380e2fddb6f9db6f3015897e0
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
@@ -218,4 +223,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

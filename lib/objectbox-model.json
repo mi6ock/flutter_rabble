@@ -1,0 +1,65 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5913983339507302294",
+      "lastPropertyId": "10:1917255945555482752",
+      "name": "Note",
+      "properties": [
+        {
+          "id": "1:1013508139123571327",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5985813309169850567",
+          "name": "text",
+          "type": 9
+        },
+        {
+          "id": "7:8271600231192305158",
+          "name": "comment",
+          "type": 9
+        },
+        {
+          "id": "9:5689093873478273701",
+          "name": "date",
+          "type": 6
+        },
+        {
+          "id": "10:1917255945555482752",
+          "name": "canari",
+          "type": 9
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "3:627414199940081620",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    3850507968950894993,
+    627414199940081620
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    2973728319836384563,
+    2642377298505646473,
+    493700015938720068,
+    6876076323509924905,
+    4721705453252018812,
+    5043594773760324037,
+    2230319965152904067,
+    7395455099661212854,
+    6494826710879114930,
+    6252938962996942646
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

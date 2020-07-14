@@ -45,16 +45,21 @@ class MyHomePage extends StatelessWidget {
         title: Text("Provider + ChangenNotifier"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            DescriptionText(),
-            CounterText(),
-            const SizedBox(
-              height: 32,
-            ),
-            const IncrementButton()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              DescriptionText(),
+              CounterText(),
+              const SizedBox(
+                height: 32,
+              ),
+              const IncrementButton(),
+              SingleChildScrollView(
+                child: Container(),
+              )
+            ],
+          ),
         ),
       ),
     );
